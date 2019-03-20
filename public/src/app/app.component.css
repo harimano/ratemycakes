@@ -1,0 +1,47 @@
+.box{
+    margin: 50px 0px;
+    width: 375px;
+    border: 1px solid purple;
+    padding: 20px;
+    display: inline-block;
+
+}
+
+
+.box2{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    width:560px;
+    height: 350px;
+    margin: 50px 10px;
+    border: 1px solid pink;
+    overflow-y: auto;
+}
+
+img{
+    width: 200px;
+    height: 150px;
+}
+
+.image{
+    display: inline-block;
+}
+
+.form{
+    display: inline-block;
+}
+
+.display{
+    padding: 20px;
+    border: 1px solid pink;
+}
+.pic{
+    display: inline-block;
+
+}
+.info{
+    margin-left: 20px;
+    display: inline-block;
+    
+}

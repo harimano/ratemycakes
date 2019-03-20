@@ -1,0 +1,62 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<div class="container">
+  <h3>Rate my Cakes</h3>
+  <div class="box">
+    <h5>Submit a cake to be rated</h5>
+    <br>
+    <form (submit)="onSubmit()">
+
+    <label for="bakername">Baker Name: </label><br>
+    <input type="text" value="" name=""  />
+    <br>
+    <label for="cakeimage">Image url: </label><br>
+    <input type="text" value="" name="" />
+    <br><br>
+    <input type="submit" value="Submit" />
+    </form>
+
+  </div>
+
+  <div class="box2">
+    
+    <div class="image">
+        <a href="" ><img src="https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4070/071f7e0c1fe45e95755b/letterbox_Sainsburys_Frasier2_RETOUCHED2_HR_2MB.jpg" alt=""></a>
+    </div>
+    <form (submit)="onSubmit2()">
+    <div class="form">
+        <select class="" id="">
+          <option>1 star</option>
+          <option>2 stars</option>
+          <option>3 stars</option>
+          <option>4 stars</option>
+          <option>5 stars</option>
+        </select>
+        <br>
+        <input type="text" value="" name="" placeholder="Enter your Comment" /><br>
+        <input type="submit" value="Submit" />
+    </div>
+    </form>
+  </div>
+
+<div class="display">
+  <h3>Baked by {{placeholder}}</h3>
+  <div class="pic">
+      <img src="https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4070/071f7e0c1fe45e95755b/letterbox_Sainsburys_Frasier2_RETOUCHED2_HR_2MB.jpg" alt="">
+  </div>
+
+  <div class="info">
+    <h6>Average Rating:</h6>
+    <br>
+    <h6>comments</h6>
+  </div>
+
+</div>
+
+
+
+
+</div>
+
+
+<router-outlet></router-outlet>

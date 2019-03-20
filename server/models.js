@@ -3,17 +3,15 @@ mongoose.connect('mongodb://localhost/ratemycake', {useNewUrlParser:true})
   .catch(err => console.log(err));
 
 const CakeSchema = new mongoose.Schema({
-    title: {
+    bakername: {
       type: String, 
       default: ""
     },
-    description: {
+    imageurl: {
       type: String, 
+      default: ""
     },
-    completed: {
-      type: Boolean, 
-      default: false 
-    }, 
+    
 }, {timestamps:true});
 
 module.exports = mongoose.model('Cake', CakeSchema); 
