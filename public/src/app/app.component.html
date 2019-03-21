@@ -5,13 +5,13 @@
   <div class="box">
     <h5>Submit a cake to be rated</h5>
     <br>
+    <p> {{ newCake| json }} </p>
     <form (submit)="onSubmit()">
-
     <label for="bakername">Baker Name: </label><br>
-    <input type="text" value="" name=""  />
+    <input type="text" value="" name="newCake.bakername" [(ngModel)]='newCake.bakername' />
     <br>
     <label for="cakeimage">Image url: </label><br>
-    <input type="text" value="" name="" />
+    <input type="text" value="" name="newCake.imageurl" [(ngModel)]='newCake.imageurl'/>
     <br><br>
     <input type="submit" value="Submit" />
     </form>
@@ -19,13 +19,13 @@
   </div>
 
   <div class="box2">
-    
+    <div *ngFor="let cake of allCakes">
     <div class="image">
-        <a href="" ><img src="https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4070/071f7e0c1fe45e95755b/letterbox_Sainsburys_Frasier2_RETOUCHED2_HR_2MB.jpg" alt=""></a>
+        <img (click)="viewCake()" src="{{cake.imageurl}}" alt="image">
     </div>
-    <form (submit)="onSubmit2()">
+    <form>
     <div class="form">
-        <select class="" id="">
+        <select name="editCake.rating" [(ngModel)]='editCake.rating' >
           <option>1 star</option>
           <option>2 stars</option>
           <option>3 stars</option>
@@ -33,13 +33,16 @@
           <option>5 stars</option>
         </select>
         <br>
-        <input type="text" value="" name="" placeholder="Enter your Comment" /><br>
-        <input type="submit" value="Submit" />
+        <p>{{comment|json}}</p>
+        <input type="text" value="" name="editCake.content" placeholder="Enter your Comment" [(ngModel)]='editCake.content'/><br>
+        <button (click)="onSubmit2(cake._id)">Submit</button>
     </div>
     </form>
   </div>
+  </div>
 
 <div class="display">
+    
   <h3>Baked by {{placeholder}}</h3>
   <div class="pic">
       <img src="https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4070/071f7e0c1fe45e95755b/letterbox_Sainsburys_Frasier2_RETOUCHED2_HR_2MB.jpg" alt="">
@@ -52,7 +55,6 @@
   </div>
 
 </div>
-
 
 
 
